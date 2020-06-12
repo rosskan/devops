@@ -59,7 +59,7 @@ namespace TodoApi.Controllers
             {
                 return BadRequest();
             }
-
+            todoItem.Name = todoItem.Name + "123";
             _context.Entry(todoItem).State = EntityState.Modified;
 
             try
