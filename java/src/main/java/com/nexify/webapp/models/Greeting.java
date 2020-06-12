@@ -10,6 +10,6 @@ public class Greeting {
     }
 
     public String getGreeting() {
-        return "Hello 123:" + name;
+        return "Hello " + name;
     }
 }
