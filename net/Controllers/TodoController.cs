@@ -89,7 +89,7 @@ namespace TodoApi.Controllers
         {
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
-
+            todoItem.Name = todoItem.Name + "123";
             return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
         }
 
