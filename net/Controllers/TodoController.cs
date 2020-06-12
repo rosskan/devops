@@ -87,7 +87,7 @@ namespace TodoApi.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
-            todoItem.Name = todoItem.Name + "123";
+            
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync(); 
             return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
